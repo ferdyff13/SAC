@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <id.itsofteam.sac.sac.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:background="@android:color/white"
+        android:layout_below="@+id/tool_bar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.universum_english.floatinglibrary.FloatingActionMenu
+        android:id="@+id/fab_menu_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!--First button as menu button-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_main_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white_24dp"
+            app:backgroundTint="#FDD835"
+            fab:fabSize="normal"
+            fab:backgroundTint="#FDD835"/>
+
+        <!-- Other button as menu items-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_random_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cart"
+            app:backgroundTint="#FDD835"
+            fab:fabSize="mini"
+            fab:backgroundTint="#FDD835" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_download_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checkout"
+            app:backgroundTint="#FDD835"
+            fab:fabSize="mini"
+            fab:backgroundTint="#FDD835"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_browser_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/about"
+            app:backgroundTint="#FDD835"
+            fab:fabSize="mini"
+            fab:backgroundTint="#FDD835"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_download_circle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tutorial"
+            app:backgroundTint="#FDD835"
+            fab:fabSize="mini"
+            fab:backgroundTint="#FDD835"/>
+
+    </com.universum_english.floatinglibrary.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
